@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang=nl>
+  
+<head>
+    <meta charset="UTF-8">
+    <title>Overzichts- en formulierpagina</title>
+    <link rel="stylesheet" type="text/css" href="css/opmaak.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+  
+<body>
+  
+  <header>
+
+      <section class="logo">
+          <a href="overzicht.html"><img src="images/menu.png"></a>
+      </section>
+
+      <h1>Verhalen</h1>
+
+      <section class="account">
+          <a href="index.html"><img src="images/gebruiker.png"></a>
+      </section>
+
+  </header>
+  
+<section id="form">
+
+    <h2>Inloggen</h2>
+
+    <p>Vul hieronder je gegevens en voorkeuren in alvorens je de verhalen bekijkt.</p>
+
+    <form>
+        <fieldset>
+            <legend>Contactgegevens</legend>
+
+            <label for="name">Voornaam</label>
+            <input id="name" name="voornaam" type="text" placeholder="Jan" required>
+
+            <label for="between">Tussenvoegsel</label>
+            <input id="between" name="tussenvoegsel" type="text" placeholder="van" required>
+
+            <label for="surname">Achternaam</label>
+            <input id="surname" name="achternaam" type="text" placeholder="Janssen" required>
+
+            <label for="adress">Adres</label>
+            <input id="adress" name="adres" type="text" placeholder="Sint Jansstraat 42" required>
+
+            <label for="zipcode">Postcode</label>
+            <input id="zipcode" name="postcode" type="text" placeholder="1000ab" required pattern="[0-9]{4}[a-z]{2}">
+
+            <label for="place">Woonplaats</label>
+            <input id="place" name="woonplaats" type="text" placeholder="Amsterdam" required>
+
+            <label for="date">Geboortedatum</label>
+            <input id="date" name="geboortedatum" type="date" required>
+
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" placeholder="janjanssen@gmail.com" required>
+
+            <label>Geslacht</label>
+
+            <input id="man" name="geslacht" type="radio" value="man">
+            <label for="man">Man</label>
+
+            <input id="woman" name="geslacht" type="radio" value="vrouw">
+            <label for="woman">Vrouw</label>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Voorkeuren</legend>
+
+            <label>Fictie of Non-fictie</label>
+
+            <input id="fic" name="fic" type="radio" value="fictie">
+            <label for="fic">Fictie</label>
+
+            <input id="nonfic" name="fic" type="radio" value="fictie">
+            <label for="nonfic">Non-Fictie</label>
+
+            <label for="color">Favoriete kleur</label>
+            <input id="color" name="col" type="color">
+
+            <label for="skills">Leeservaring</label>
+            <input id="skills" name="skills" type="range" min="0" max="100">
+
+            <label for="submit"></label>
+            <input id="submit" name="submit" type="submit" value="Verzenden">
+
+        </fieldset>
+    </form>
+</section>
+</body>
+</html>
