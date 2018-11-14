@@ -1,5 +1,31 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --article-header-width: 25rem;
+    --header-height: 7em;
+    --content: "0";
+}
+
+#user {
+    position: relative;
+}
+
+#user:before {
+    background-color: #fa3e3e;
+    border-radius: 2px;
+    color: white;
+
+    padding: 1px 3px;
+    font-size: 10px;
+
+    position: absolute; /* Position the badge within the relatively positioned button */
+    top: 0;
+    right: 0;
+    content: var(--content);
 }
 
 header {
@@ -8,14 +34,21 @@ header {
     width: 100%;
     background-color: #fff;
     padding-left: 0;
-    height: 7em;
-    display: flex;
+    height: var(--header-height);
     padding-top: .5em;
-    flex-direction: row;
-    justify-content: space-between;
     box-shadow: 0 .375em .313em 0 rgba(235, 235, 235, 0.54);
 }
+header ul.nav {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+header ul.nav li {
+    display: inline-flex;
 
+}
 .logo {
     float: left;
     flex: 0;
@@ -27,8 +60,6 @@ h1 {
     font-family: 'Montserrat', sans-serif;
     text-align: left;
     color: rgb(104, 209, 119);
-    margin-top: 0.8em;
-    margin-left: 0.5em;
 }
 
 .account {
@@ -52,14 +83,27 @@ h2 {
     color: rgb(29, 0, 142);
 }
 
-h3 {
+.title {
     font-size: 1.3em;
     font-family: 'Montserrat', sans-serif;
     text-align: left;
     color: rgb(104, 209, 119);
 }
 
-body section input {
+body .zoeken {
+    display: flex;
+    flex-direction: row;
+}
+body .zoeken form {
+    width: var(--article-header-width);
+    display: flex;
+}
+
+body .zoeken .search {
+    margin-right: 1em;
+    width: 100%;
+}
+body .zoeken input {
     font-size: 1em;
     padding: 0.5em;
     margin-left: 1em;
@@ -67,11 +111,8 @@ body section input {
     border-radius: 0.6em;
     font-family: 'Montserrat', sans-serif;
 }
-body section input#search {
-    width: 80%;
-}
 
-body section input#filter-check + label {
+body .zoeken label {
     background-color: rgb(232, 72, 106);
     color: white;
     border: 0;
@@ -86,6 +127,9 @@ body section input#filter-check + label {
     text-decoration: none;
 }
 
+body .zoeken label input.filter-check {
+    visibility: hidden;
+}
 
 body button {
     background-color: rgb(232, 72, 106);
@@ -102,10 +146,6 @@ body button {
     text-decoration: none;
 }
 
-trucje {
-    transform: translateX(1em, 20em);
-}
-
 body button:hover {
     background-color: rgb(300, 72, 106);
 }
@@ -116,61 +156,62 @@ body button:active {
     position: relative;
     top: 0.1em;
 }
-body .zoeken {
-    display: flex;
-    flex-direction: row;
-}
 
-body .zoeken #search {
-    margin-right: 1em;
-}
 /**
-Micro-interaction 1 - Highlight (in aqua) door zoeken
+Micro-interaction 1 - Highlight from search
  */
-#overview article {
+.overview article {
     -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
     transition: width 2s, height 2s, background-color 2s, transform 2s;
 }
-#overview article.found {
-    background-color: aqua;
+
+.overview article.found {
+    background-color: rgba(28,28,128,0.75);
+    border-radius: 1em;
     -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
     transition: width 2s, height 2s, background-color 2s, transform 2s;
 }
 
 /**
-Micro-interaction 2 - Vertop en show tekst van verhaal
+Micro-interaction 2 - hide & show text of story
  */
-#overview article {
+.overview article {
     max-height: 2000px;
     opacity: 1;
-    transition: opacity 1s, max-height 1s ease-in;
+    transition: all 1s;
 }
-#overview article.small {
+.overview article.small {
     max-height: 8em;
-    min-width: 25em;
-    transition: max-height 1s ease-out;
+    min-width: var(--article-header-width);
+    transition: all 1s;
 }
-#overview article.small :not(h3) {
+.overview article.small .story, .overview article.small .read {
     opacity: 0;
     display: none;
-    transition: opacity 1s ease-out;
+    transition: all 1s;
 }
-
+.overview article .title {
+    display: flex;
+    justify-content: space-between;
+}
 /**
-Micro-transaction 3 - Verstop op basis van filter
+Micro-transaction 3 - Hide on filter
  */
-#overview article.hide {
+.overview article.hide {
     visibility: visible;
 }
-#overview article.hide {
+.overview article.hide, .story .hidden {
     visibility: hidden;
     opacity: 0;
-    transition: visibility 1s, opacity 0.5s linear;
+    font-size: 0;
+    transition: all 1s linear;
+}
+.overview article.upper h3, .overview article.upper p{
+    text-transform: uppercase;
 }
 /*Media querie smartphone*/
 
 @media (max-width: 37.5em) {
-
     header {
         position: fixed;
         top: 0;
@@ -264,8 +305,8 @@ Micro-transaction 3 - Verstop op basis van filter
         padding: 2em;
         background-color: rgba(255, 255, 255, 1);
         border-radius: 1em;
-        min-width: 16em;
-        max-width: 40em;
+        min-width: var(--article-header-width);
+        max-width: var(--article-header-width);
         margin: 1.2em 1em;
     }
 
@@ -297,7 +338,7 @@ Micro-transaction 3 - Verstop op basis van filter
         top: 0.1em;
     }
 
-    body > section {
+    body > section, body .zoeken {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -319,14 +360,56 @@ Micro-transaction 3 - Verstop op basis van filter
 }
 
 @media (min-width: 62.5em) {
-
-    section > article {
+    body .overview {
+        flex-direction: column;
+    }
+    .overview, .zoeken {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 1.5em;
+        flex-wrap: wrap;
+    }
+    body .overview article {
+        order: 10;
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+    }
+    .overview article .title {
         margin: 1.2em;
-        padding: 2em;
+        padding: 1.5em;
         background-color: rgba(255, 255, 255, 1);
         border-radius: 1em;
-        max-width: 25em;
-        min-width: 16em;
+        max-width: var(--article-header-width);
+        min-width: var(--article-header-width);
+    }
+
+    .overview article:not(.small):not(.found) {
+        background-color: rgba(128,128,128,0.6);
+        border-radius: 1em;
+    }
+
+    .overview article .story {
+        margin: 1.2em;
+        padding: 1.5em;
+        background-color: rgba(255, 255, 255, 1);
+        border-radius: 1em;
+        /*max-width: var(--article-header-width);*/
+        min-width: var(--article-header-width);
+
+        position: fixed;
+        left: calc( var(--article-header-width) + 12rem );
+        top: var(--header-height);
+    }
+
+    .overview article .story div {
+        transition: all 1s linear;
+
+    }
+    .overview article .story div p {
+        margin-bottom: 1em;
+        font-size: 1em;
     }
 
     article a {
@@ -356,14 +439,8 @@ Micro-transaction 3 - Verstop op basis van filter
         top: 0.1em;
     }
 
-    body > section {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: center;
-        padding: 1.5em;
-        flex-wrap: wrap;
 
-    }
+
+
 
 }

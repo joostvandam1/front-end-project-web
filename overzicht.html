@@ -6,172 +6,420 @@
     <link rel="stylesheet" type="text/css" href="css/opmaak2.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.materialdesignicons.com/2.8.94/css/materialdesignicons.min.css" rel="stylesheet">
+
     <script src="js/microinteractions.js"></script>
 </head>
 <body>
-  <header>
-
-      <section class="logo">
-          <a href="overzicht.html"><img src="images/menu.png"></a>
-      </section>
-
-      <h1>
-          Verhalen
-      </h1>
-    
-      <section class="account">
-          <a href="index.html"><img src="images/gebruiker.png"></a>
-      </section>
-
-  </header>
+<header>
+    <ul class="nav">
+        <li class="logo">
+            <a href="overzicht.html"><img src="images/menu.png"></a>
+        </li>
+        <li>
+            <h1>
+                Verhalen
+            </h1>
+        </li>
+        <li class="account">
+            <a href="index.html">
+                <span id="user"><img src="images/gebruiker.png"></span>
+            </a>
+        </li>
+    </ul>
+</header>
 
 <section class="zoeken">
-    <input id="search" type="text" placeholder="Zoek een verhaal.." />
-    <input id="filter-check" type="checkbox" value="Filter" />
-    <label for="filter-check">Filter</label>
-    <button class="klik">
-        Zoek
-    </button>
+    <form onsubmit="return false;">
+        <input class="search" type="text" placeholder="Zoek een verhaal.."/>
+        <label>Filter
+            <input name="filter" class="filter-check" type="checkbox" value="Filter"/>
+        </label>
+        <button class="klik">
+            Zoek
+        </button>
+    </form>
 </section>
 
-<section id="overview">
-    <article id="one">
-        <h3>Hardboiled</h3>
-
-        <p>Het is snikheet in die godverdomde bus. Stinkend zweet vermengd met de geur van klamme jassen en natte hond.
-            Mijn zoon slaapt. Goddank. Een hardnekkige kater bonkt tegen mijn slapen. Flashback naar de avond ervoor.
-            Een fles goedkope whiskey en oude kaaskoekjes.</p>
-
-        <p>Ik stap uit. Centraal Station, de anus van Amsterdam. Pneumatisch geboor trilt zich een weg naar mijn buis
-            van Eustachius. De koppijn verergert. Bouwputten. Overal bouwputten. Amsterdam is een grote, gapende open
-            wond hier. Heiende heipalen beuken gezellig mee op het ritme van mijn kloppende kater. Ik ben al een
-            miezerige week op zoek naar Stijloefeningen van die godverdomde klootzak van een Raymond ‘De Aal’ Queneau.
-            Het miezert zachtjes. Ik trek m’n kop in m’n kraag en balanceer over de natte planken langs de
-            bouwputten...</p>
-
-        <a id="read1" href="verhaal1.html">Lees verhaal</a>
-
+<section class="overview">
+    <article id="hardboiled">
+        <div class="title">
+            <h3>Hardboiled</h3>
+            <span class="mdi mdi-heart-outline"></span>
+        </div>
+        <a class="read" href="javascript:void(0);">Lees verhaal</a>
+        <div class="story">
+            <div class="short"><p>Het is snikheet in die godverdomde bus. Stinkend zweet vermengd met de geur van klamme
+                jassen en natte hond. Mijn zoon slaapt. Goddank. Een hardnekkige kater bonkt tegen mijn slapen.
+                Flashback naar de avond ervoor. Een fles goedkope whiskey en oude kaaskoekjes. Ik stap uit. Centraal
+                Station, de anus van Amsterdam. Pneumatisch geboor trilt zich...</p></div>
+            <div class="rest hidden">
+                <p>Ik stap uit. Centraal Station, de anus van Amsterdam. Pneumatisch geboor trilt zich een weg naar mijn
+                    buis van Eustachius. De koppijn verergert. Bouwputten. Overal bouwputten. Amsterdam is één grote,
+                    gapende open wond hier. Heiende heipalen beuken gezellig mee op het ritme van mijn kloppende kater.
+                    Ik ben al een miezerige week op zoek naar Stijloefeningen van die godverdomde klootzak van een
+                    Raymond ‘De Aal’ Queneau. Het miezert zachtjes. Ik trek m’n kop in m’n kraag en balanceer over de
+                    natte planken langs de bouwputten.</p>
+                <p>De bibliotheek. Dit gebouw herbergt nogal wat lijken. Ik weet van minstens twee kickboxers en een
+                    mislukte bruiloftszanger dat ze hier zijn ingemetseld. Ik kijk naar boven. Reik in mijn jaszak.
+                    Draai de dop van m’n zakflacon en neem een goede slok om mezelf moed in te drinken. En dan, een
+                    stem… zoeter dan de zoetste honing. Ze verontschuldigt zich. Ik kijk om. Een godin met ravenzwarte
+                    krullen. In gebroken Engels vraagt ze waar het postkantoor is. Ach, meisje toch, je moest eens
+                    weten. Vraag het niet aan mij. Zoek iemand anders. Ik snuif haar geur op, bijna niet meer
+                    waarneembaar dankzij de wind. Het postkantoor is weggevaagd. Ik zeg dat ze in de Raadhuisstraat moet
+                    zijn. Een auto met een Frans nummerbord rijdt achteruit. De Godin Met De Zwarte Krullen kijkt om.
+                    Lichte paniek. Ik glimlach. Zij glimlacht. Droevig. Het moment bevriest. Duizend uren lang. Zij
+                    breekt eruit. Als een kuiken uit het ei. En rent achter de auto aan. Vaarwel.</p>
+                <p>Binnen. Tweede verdieping. Bij de boeken van Queneau. Ze staan rustig naast elkaar. Maar
+                    Stijloefeningen is nergens te bekennen. Queneau waar ben je? Hufter. Ik kijk voor de zekerheid bij
+                    de P en de R. Maar niks. Godverdomme niks. De laffe chien is ’m gepeerd. Met de staart tussen de
+                    benen. Ik tik het in op de computer. ‘Stijloefeningen, Raymond Queneau’. ‘Minstens één exemplaar
+                    aanwezig,’ zegt de computer. Ik kijk nogmaals. Niks. Ik haal er een medewerker bij. De lijer kijkt
+                    mee. Ziet niks. Haalt z’n schouders op. Ik kan het rambam krijgen. En anders moet ik even een
+                    mailtje sturen naar het magazijn. Daar moeten ze nog een exemplaar hebben. Ik mail naar het
+                    magazijn. Beleefd. Afstandelijk. Professioneel. Ik wacht. Kwartier later. Mail terug. Er is nog één
+                    exemplaar aanwezig. Op de tweede verdieping. Tussen de andere romans. Er knapt iets in me.</p>
+            </div>
+        </div>
     </article>
-    <article id="two">
-        <h3>Zoon</h3>
-
-        <p>Vroem. Tuut tuut. Wheeeh!! Die! Die! Wheeeh! Die! Die! Hjumhjumhjum. Zzzzzzzzzz.*</p>
-
-        <p>Zzzzzzz.**</p>
-
-        <p>Zzzzzzz. Hjumhjumhjum. Zzzzzzz. Grumbl. Huh? Wheeeh. Die! Die! Papa? Hjmwhumwhum. Boe?Boe? Hjmwhumwhum.
-            Wheeeh!!! Die!***</p>
-
-        <p>Zjjoemmm. Vroem. Tuut tuut. Schoe!****</p>
-
-        <p>* We zitten in zo’n enorme auto, samen met een aantal andere mensen. Ik voel dat ik elk moment in slaap kan
-            vallen. Ik gooi woedend m’n speen weg. Papa pakt de speen op, doet ‘m even in zijn eigen moment en stopt ‘m
-            dan in mij. Ik haal de speen eruit en gooi hem weer woedend weg. Dat herhaalt zich een paar keer. Totdat ik
-            me helemaal leeg gezogen voel. Ik kan niet meer. Ik begin op de speen te zuigen en binnen een paar seconden
-            wordt de wereld troebeler en nog een paar seconden later ben ik weg. Het deint lekker. Ik hoor wat gekraak,
-            het wordt wat benauwder. Even later hoor ik een sissend geluid. Het is ineens een stuk kouder. Er klinkt een
-            zacht getik. Ik hoor voetstappen van heel veel mensen. Stappe stappe stappe. Ik hoor gedreun en
-            gedril...</p>
-        <a id="read2" href="verhaal1.html">Lees verhaal</a>
-
+    <article id="klumperbeven">
+        <div class="title">
+            <h3>Klumperbeven</h3>
+            <span class="mdi mdi-heart-outline"></span>
+        </div>
+        <a class="read" href="javascript:void(0);">Lees verhaal</a>
+        <div class="story">
+            <div class="short"><p>Ik bus de stap uit en been met gepaste zwind over het stationsplein. In mijn zoon
+                ligt
+                de kinderwagen te slapen. Het pijpt regenstelen en er guurt een winderige waai. De mensen keren in
+                zichzelf gelopen, kraag in de kop, grond richting neus. Het is hier niet bepoeld een vrolijke baal.
+                Wat
+                een zeringtooi! Amsterdam...</p></div>
+            <div class="rest hidden">
+                <p>lijkt wel één blote grouwput. Drilpalen en heiboren trommelen mijn teistervliezen. Ik plank
+                    verder
+                    over een loop. Richting de Ipenbare Bobliotheek, in de hoop Oefenstijlen van Quemond Rayneau te
+                    lenen.</p>
+                <p>Vlak voordat ik de betreed wil bibliotheken, trekt een jas mij aan m’n vrouw. Het is een
+                    beeldvrouwe
+                    schoon, met haar zo raaf als de zwarten. Ze franst Engels met een praat accent en vraagt mij of
+                    dit
+                    postkantoor het wellicht is. Er heeft hier inderdaad post een ooitkantoor gestaan, lang geleden.
+                    Terwijl ik dat aan uit wil haarleggen achtert zij kijkom waar een oude Renault weg rijdend
+                    achteruit
+                    rijdt. Ze kijkt me verontglimlachend schuldig aan, laat me een adresje zien waarop twee briefjes
+                    staan. Staarhuisraad, lees ik. Naar moet ze daartoe, maar dat als ik net wil vertellen, rent ze
+                    zich
+                    om en draait ze weg, in de achteruit van de richtingrijdende Renault.</p>
+                <p>Boven, op de verdiepte tweeling, qoek ik bij de zoek naar Oefenstijlen. Maar hoe ik oek zook, het
+                    vind is niet te boeken. Ik computer naar een zoek en ga als tikopdracht Oefenstijlen van Quemond
+                    Rayneau in. Volgens de catagale digitogus is het boek gewoon aanwezig. Omdat ik zaak wil zijn
+                    van
+                    m’n zeker, hulp ik de roep in van een medewerker. Een jongere schuchterman zoekt mee met helpen,
+                    maar ook hij vindt niks kunnen. Hij tipt me wel de geef om even een stuurtje naar de mail te
+                    magazijnen. Kost je een tijdje kwartieren, maar bij de heb moeten ze ‘m zeker magazijnen. Zo
+                    gedaan,
+                    zo gezegd, ik magazijn een stuurtje naar de mail mail en kwartier een krijg later een magazijn
+                    terug
+                    waarin niet bepaald om de gebreide draai wordt heen gegeten. Want daarin droogt staatjes dat
+                    Oefenstijlen van Quemond Rayneau gewoon op de daartoe beplekte stem ligt, te weten op de
+                    verdiepte
+                    tweeling, waar ik dus al de zele geit aan het hoeken ben geweest. Ik was dus mooi met een blije
+                    mus
+                    doodgemaakt.</p>
+                <p>Een laatje tijder, in een winkelbaby op het Lom en Bosserplein, zoon ik scheteboentjes voor mijn
+                    koop.</p>
+            </div>
+        </div>
     </article>
-    <article id="three">
-        <h3>Telegrafisch</h3>
-
-        <p>BUS STOPT STOP NAAR BIBLIOTHEEK VOOR STIJLOEFENINGEN STOP VAN RAYMOND QUENEAU STOP REGEN EN WIND MENSEN IN
-        ZICHZELF GEKEERD STOP MODDERIGE TERINGZOOI HIER STOP DRILBOREN EN HEIPALEN TEISTEREN TROMMELVLIEZEN STOP VROUW
-        VRAAGT IN ENGELS MET FRANS ACCENT OF DIT POSTKANTOOR IS STOP ONTKENNEND ANTWOORD WORDT NIET GEHOORD WEGENS
-        WEGRENNEN NAAR ACHTERUITRIJDENDE RENAULT STOP TWEEDE VERDIEPING BIJ Q STOP STIJLOEFENINGEN NIET AANWEZIG STOP
-        VOLGENS COMPUTER WEL STOP MEDEWERKER ZOEKT MEE STOP OOK NIKS STOP VOLGENS MEDEWERKER EXEMPLAAR IN MAGAZIJN STOP
-        MAIL NAAR MAGAZIJN STOP MAIL VAN MAGAZIJN STOP VOLGENS MAGAZIJN STIJLOEFENINGEN GEWOON AANWEZIG OP DAARTOE
-        BESTEMDE PLEK STOP KUT STOP...</p>
-
-        <a id="read3" href="verhaal1.html">Lees verhaal</a>
-
+    <article id="telegrafisch" class="upper">
+        <div class="title">
+            <h3>Telegrafisch</h3>
+            <span class="mdi mdi-heart-outline"></span>
+        </div>
+        <a class="read" href="javascript:void(0);">Lees verhaal</a>
+        <div class="story">
+            <div class="short"><p>Bus stopt stop naar bibliotheek voor stijloefeningen stop van raymond queneau stop
+                regen en wind mensen in zichzelf gekeerd stop modderige teringzooi hier stop drilboren en heipalen
+                teisteren trommelvliezen stop vrouw vraagt in engels met frans accent of dit postkantoor is stop
+                ontkennend antwoord wordt niet gehoord wegens wegrennen naar achteruitrijdende renault stop tweede
+                verdieping bij q stop stijloefeningen niet aanwezig stop volgens computer wel stop medewerker zoekt mee
+                stop ook niks stop volgens medewerker exemplaar in magazijn stop mail naar magazijn stop mail van
+                magazijn stop volgens magazijn stijloefeningen gewoon aanwezig op daartoe bestemde plek stop kut
+                stop...</p></div>
+            <div class="rest hidden">
+                <p>babyschoentjes in babywinkel op bos en lommerplein stop ook mooi stop</p>
+            </div>
+        </div>
     </article>
-    <article id="four">
-        <h3>Telegrafisch</h3>
-
-        <p>BUS STOPT STOP NAAR BIBLIOTHEEK VOOR STIJLOEFENINGEN STOP VAN RAYMOND QUENEAU STOP REGEN EN WIND MENSEN IN
-        ZICHZELF GEKEERD STOP MODDERIGE TERINGZOOI HIER STOP DRILBOREN EN HEIPALEN TEISTEREN TROMMELVLIEZEN STOP VROUW
-        VRAAGT IN ENGELS MET FRANS ACCENT OF DIT POSTKANTOOR IS STOP ONTKENNEND ANTWOORD WORDT NIET GEHOORD WEGENS
-        WEGRENNEN NAAR ACHTERUITRIJDENDE RENAULT STOP TWEEDE VERDIEPING BIJ Q STOP STIJLOEFENINGEN NIET AANWEZIG STOP
-        VOLGENS COMPUTER WEL STOP MEDEWERKER ZOEKT MEE STOP OOK NIKS STOP VOLGENS MEDEWERKER EXEMPLAAR IN MAGAZIJN STOP
-        MAIL NAAR MAGAZIJN STOP MAIL VAN MAGAZIJN STOP VOLGENS MAGAZIJN STIJLOEFENINGEN GEWOON AANWEZIG OP DAARTOE
-        BESTEMDE PLEK STOP KUT STOP...</p>
-
-        <a id="read4" href="verhaal1.html">Lees verhaal</a>
-
+    <article id="zombie">
+        <div class="title">
+            <h3>Zombie</h3>
+            <span class="mdi mdi-heart-outline"></span>
+        </div>
+        <a class="read" href="javascript:void(0);">Lees verhaal</a>
+        <div class="story">
+            <div class="short"><p>Duizenden hongerige ondoden lopen zielloos over het stationsplein. Op zoek naar
+                voedsel, naar half vergane hondenlijken, naar vers mensenvlees. Het is gekkenwerk dat ik hier ben, maar
+                de brandstof van de bus is op. Ik hoopte dwars door de menigte wandelende lijken heen te kunnen rauzen.
+                Maar het mocht niet zo zijn. Ergens ter hoogte...</p></div>
+            <div class="rest hidden">
+                <p>van het gebouw dat ooit Oibibio huisvestte, hield de bus op met rijden. Ik heb ‘m uit laten rollen en
+                    nu loop ik hier. Onder mijn gele regenpak heb ik mezelf in aluminiumfolie verpakt in de hoop niet
+                    besmet te worden door de verontreinigde miezerregen. Donkere wolken hangen als een woedende God
+                    boven het troosteloze Centraal Station. Een venijnige wind rammelt aan de kapotte ramen. De
+                    kinderwagen die ik voortduw zit vol met jachtgeweren, ijzeren staven, keukenmessen, een shotgun en
+                    een kettingzaag. Maar als ik dat hier moet gebruiken… als ze merken dat ik nog niet dood ben… dan
+                    ben ik verloren, dat weet ik maar al te goed. Waarom doe ik dit eigenlijk? Om Stijloefeningen van
+                    Raymond Queneau te kunnen bemachtigen. Tja. Als ik mij iets in m’n hoofd haal, dan rust ik niet
+                    voordat ik het voor elkaar heb. Zo ben ik. Daar kan geen bloeddorstige ondode ook maar iets aan
+                    veranderen. Gelukkig zijn ze te veel met zichzelf bezig om me op te merken. Ik heb het gehaald en
+                    loop nu over een plank. Links en rechts modderige bouwputten die er verlaten bij liggen. Beneden
+                    vechten drie schurftige honden om een groen uitgeslagen mensenbeen.</p>
+                <p>Voor de bibliotheek. Een aantal letters die ooit, in betere tijden, samen met een een aantal andere
+                    letters boven de ingang de woorden Openbare Bibliotheek vormden, liggen op de grond. De ruiten van
+                    de bibliotheek zijn stuk voor stuk gesneuveld. Ik kijk naar boven. Het gebouw hangt dreigend over me
+                    heen, als een enorme grafsteen die mij elk moment kan verpletteren. Ik pak voor de zekerheid m’n
+                    shotgun uit de kinderwagen en laad ‘m door. Net als ik naar binnen wil gaan, voel ik dat er iemand
+                    aan mijn rechterbeen hangt. Als in een reflex geef ik een trap naar achteren, draai me om en schiet
+                    een kogel dwars door het hoofd van een vrouwelijke zombie. De kogel mist z’n uitwerking niet: haar
+                    halve hoofd is weg. Haar gitzwarte krullen bungelen op haar rechterschouder. Waar ooit haar
+                    rechteroog had gezeten zit nu een groot gapend gat waaraan een oor bungelt. POST OFFICE, schreeuwt
+                    ze. Ik hoor dat ze een Frans accent heeft. Ooit heeft hier inderdaad een postkantoor gestaan. Lang
+                    voordat Amsterdam besmet raakte met het virus. Terwijl ik mijn shotgun herlaad, draait de ondode
+                    vrouw zich om en waggelt ze met haar armen vooruit richting een achteruit rijdende Renault 21 waarin
+                    een lachend skelet achter het stuur zit. Lappen vlees hangen aan zijn schedel. Ik schiet de vrouw in
+                    haar rug. Flarden bedorven zombievlees vliegen in de rondte, maar de vrouw blijft half vallend
+                    doorlopen.</p>
+                <p>Boven op de tweede verdieping. Het is een chaos hier. Alle ramen zijn eruit. Er liggen meer TL-buizen
+                    kapot op de grond dan dat ze aan het plafond hangen. Overal liggen boeken. Bij de Q zijn zowaar een
+                    aantal boeken van Queneau te vinden, maar uiteraard zit Stijloefeningen daar niet bij. Dat zul je
+                    altijd zien. Ik loop naar de bureaus waar eens de computers stonden. Er staan er nog wel een paar.
+                    Maar alles is eruit gehaald. Volledig ontmanteld. Aan diggels geslagen beeldschermen. Maar terwijl
+                    ik hier sta, zie ik dat er iemand achter een bureau zit. Ik laad mijn shotgun weer en sluip op de
+                    persoon af, die diep geconcentreerd boeken aan het sorteren is. Een vrij gave, van enige blos
+                    voorziene huid doet mij vermoeden dat ik hier met een levend wezen te maken heb. Als ik hem vraag
+                    wie hij is, schrikt hij zich helemaal het apenzuur. Maar hij hervat zich vrij snel door een AK47 te
+                    pakken en in het wilde weg te gaan schieten. Gelukkig is de man zo bijziend als een Kentucky Fried
+                    Chicken, zodat ik tijd heb om me te verschuilen achter een stuk of tien zo te zien amper gelezen
+                    exemplaren van De Ontdekking van de Hemel. ‘Ola supermercato‘, schreeuw ik, ‘ik wilde alleen maar
+                    weten of jullie Stijloefeningen van Raymond Queneau hebben.’</p>
+                <p>‘Zeg dat dan’, schreeuwt de medewerker.</p>
+                <p>‘Ik ben op zoek naar Stijloefeningen van Raymond Queneau.’</p>
+                <p>‘Bij de Q’, schreeuwt de medewerker.</p>
+                <p>‘Daar lag ie niet.’</p>
+                <p>‘Misschien heeft het magazijn nog een exemplaar’, zegt de medewerker.</p>
+                <p>‘Hoe weet ik dat?’</p>
+                <p>‘Moet je even een mailtje sturen.’</p>
+                <p>‘Zijn er nog computers die het doen dan?’</p>
+                <p>‘Nee.’</p>
+                <p>‘Hoe moet ik dan een mailtje sturen?’</p>
+                <p>‘Goed punt. Laat mij daar even over nadenken.’ Zegt de medewerker.</p>
+                <p>Vijftien minuten later deelt de medewerker mij mede dat er lang over heeft nagedacht, maar dat hij
+                    geen idee heeft hoe je het magazijn zonder mail moet bereiken. Enigszins teleurgesteld begin ik aan
+                    de barre tocht terug.</p>
+                <p>Op het Bos en Lommerplein, vlak bij mijn schuilplaats onder de restanten van de ringweg, vind ik in
+                    een verlaten babywinkel een paar prachtige babyschoentjes voor mijn zoon.</p>
+            </div>
+        </div>
     </article>
-    <article id="five">
-        <h3>Telegrafisch</h3>
-
-        <p>BUS STOPT STOP NAAR BIBLIOTHEEK VOOR STIJLOEFENINGEN STOP VAN RAYMOND QUENEAU STOP REGEN EN WIND MENSEN IN
-        ZICHZELF GEKEERD STOP MODDERIGE TERINGZOOI HIER STOP DRILBOREN EN HEIPALEN TEISTEREN TROMMELVLIEZEN STOP VROUW
-        VRAAGT IN ENGELS MET FRANS ACCENT OF DIT POSTKANTOOR IS STOP ONTKENNEND ANTWOORD WORDT NIET GEHOORD WEGENS
-        WEGRENNEN NAAR ACHTERUITRIJDENDE RENAULT STOP TWEEDE VERDIEPING BIJ Q STOP STIJLOEFENINGEN NIET AANWEZIG STOP
-        VOLGENS COMPUTER WEL STOP MEDEWERKER ZOEKT MEE STOP OOK NIKS STOP VOLGENS MEDEWERKER EXEMPLAAR IN MAGAZIJN STOP
-        MAIL NAAR MAGAZIJN STOP MAIL VAN MAGAZIJN STOP VOLGENS MAGAZIJN STIJLOEFENINGEN GEWOON AANWEZIG OP DAARTOE
-        BESTEMDE PLEK STOP KUT STOP...</p>
-
-        <a id="read5" href="verhaal1.html">Lees verhaal</a>
-
+    <article id="beroemd">
+        <div class="title">
+            <h3>Beroemd</h3>
+            <span class="mdi mdi-heart-outline"></span>
+        </div>
+        <a class="read" href="javascript:void(0);">Lees verhaal</a>
+        <div class="story">
+            <div class="short"><p>Vlak voordat ik de bus uitstap bedank ik de buschauffeur via de spiegel voor zijn
+                diensten. Hij zwaait joviaal terug. ‘Mijn vrouw is een groot fan van u’, roept hij. ‘Doe haar de
+                groeten’, zeg ik en stap uit. Centraal Station. Ik duw mijn zoon voort. Hij slaapt. Zich onbewust van de
+                last die er ...</p></div>
+            <div class="rest hidden">
+                <p>Vlak voordat ik de bibliotheek wil binnengaan tikt er iemand op mijn rug. Er staat een kleine vrouw
+                    met dikke, inktzwarte krullen voor me. Ik reik naar mijn binnenzak om een foto met handtekening te
+                    pakken, maar de vrouw blijkt niet van hier en vraagt in het Engels met een Frans accent of dit het
+                    postkantoor is. ‘Nee’, zeg ik, ‘dit is de bibliotheek.’ De vrouw glimlacht en kijkt achter zich.
+                    Daar rijdt een grijze Renault 21 achteruit rijdend van ons weg. Ze draait zich weer om en glimlacht
+                    naar me. ‘Are you..?’ Ze durft haar zin niet af te maken. ‘Yes’, zeg ik, ‘I am.’ Ze haalt een
+                    briefje uit haar binnenzak en een pen. ‘Would you..?’, zegt ze, ‘…my husband is a big fan.’ ‘Of
+                    course’, zeg ik. En doe de dop van de pen. Raadhuisstraat, lees ik op het briefje. ‘That’s where you
+                    should go’, zeg ik terwijl ik mijn handtekening zet. Maar ze grist het papiertje uit mijn handen,
+                    bedankt me met een schaapachtig lachje en rent achter de Renault aan.</p>
+                <p>Binnen, op de tweede verdieping. De rust in de bibliotheek is duidelijk verstoord. Ik sta bij de Q
+                    van Queneau te zoeken naar Stijloefeningen. Mensen lopen nadrukkelijk nonchalant langs. Er staan
+                    ineens aardig wat mensen bij de R en de S te zoeken naar boeken die ze vijf minuten geleden nog niet
+                    zochten. Ik vind niks, loop naar de computers en deel hier en daar wat glimlachjes en knikjes uit.
+                    Ik tik ‘Stijloefeningen’ in op de online catalogus. Twee schoolmeisjes van een jaar of veertien
+                    komen giechelend naar me toe. Volgens de online catalogus ligt Stijloefeningen gewoon op de plank.
+                    ‘Meneer’, zegt de ene. Ik glimlach. Ze houdt een boek voor zich. ‘Zou ik uw handtekening mogen’,
+                    vraagt ze. ‘Maar dat is een boek van de bibliotheek’, zeg ik. ‘Doe dan maar hier’, zegt ze. Ze geeft
+                    me een dikke viltstift en trekt haar truitje omhoog. Ik zet m’n handtekening op haar buik en geef
+                    haar navel wat bloemblaadjes. Ze bedankt me en loopt snel weg samen met haar vriendin om ergens ter
+                    hoogte van de K in lachen uit te barsten. Ik loop naar een medewerker die met z’n rug naar me toe
+                    zit te tikken op zijn computer. ‘Meneer’, zeg ik. ‘Ogenblik’, zegt hij. Hij blijft nog even
+                    doortikken, draait zich om en zegt zonder mij aan te kijken: ‘Zeg het ‘ns.’ Ik vertel hem dat ik op
+                    zoek ben naar Stijloefeningen van Raymond Queneau. Dat ik het niet kon vinden, maar dat het boek
+                    volgens de online catalogus gewoon aanwezig is. ‘Dan moet u beter zoeken’, zegt hij. Hij kijkt me
+                    aan, ziet wie ik ben, verslikt zich in zijn denkbeeldige koffie en begint zich nerveus te excuseren.
+                    Ik zeg dat het niet geeft. Hij stamelt dat het wel geeft en biedt aan om mee te helpen zoeken. Hij
+                    gaat eerst naar de Q. Vindt niks. Loopt de P en de R langs. Kijkt op de trolleys met net
+                    teruggebrachte boeken. Zoekt bij de K van Kousbroek. Zelfs nog even bij de C van Cousbroek. Ik zeg
+                    dat ik het wel een andere keer probeer, maar hij wil er niets van weten. Volgens hem moet het
+                    magazijn er nog een hebben. Of ik hier even wil wachten. Hij rent naar beneden. Is een kwartier weg.
+                    Ik deel wat handtekeningen uit. Een vrouw vertelt dat ik haar leven heb veranderd. De medewerker
+                    komt hijgend boven met de mededeling dat Stijloefeningen, volgens het magazijn, gewoon op de daartoe
+                    bestemde plek ligt. Bij de Q van Queneau dus. Waar we de hele tijd hadden gekeken. Ik glimlach. De
+                    medewerker zegt dat hij net een vriend heeft gebeld die bij een antiquariaat werkt. Daar hebben ze
+                    het boek niet op voorraad liggen, sterker nog, er waren veel meer mensen naar op zoek, maar de
+                    vriend van de medewerker had beloofd dat meneer Molovich voorrang zou krijgen. Ik glimlach
+                    vriendelijk en bedank hem voor de moeite. Vlak voordat ik ga, vraagt de medewerker, inmiddels diep
+                    paars aangelopen, of hij een handtekening kan krijgen. Zijn moeder is een groot fan van mij.</p>
+                <p>Op het Bos en Lommerplein, vlak bij mijn huis, vind ik in een babywinkel de perfecte babyschoentjes
+                    voor mijn zoon. Ik wil een foto met handtekening pakken, maar aan de neutrale toon te oordelen
+                    waarop de verkoper vraagt of ik contant of met pinpas wil betalen, heeft hij nog nooit van de grote
+                    Max J. Molovich gehoord.</p>
+            </div>
+        </div>
     </article>
-    <article id="six">
-        <h3>Telegrafisch</h3>
-
-        <p>BUS STOPT STOP NAAR BIBLIOTHEEK VOOR STIJLOEFENINGEN STOP VAN RAYMOND QUENEAU STOP REGEN EN WIND MENSEN IN
-        ZICHZELF GEKEERD STOP MODDERIGE TERINGZOOI HIER STOP DRILBOREN EN HEIPALEN TEISTEREN TROMMELVLIEZEN STOP VROUW
-        VRAAGT IN ENGELS MET FRANS ACCENT OF DIT POSTKANTOOR IS STOP ONTKENNEND ANTWOORD WORDT NIET GEHOORD WEGENS
-        WEGRENNEN NAAR ACHTERUITRIJDENDE RENAULT STOP TWEEDE VERDIEPING BIJ Q STOP STIJLOEFENINGEN NIET AANWEZIG STOP
-        VOLGENS COMPUTER WEL STOP MEDEWERKER ZOEKT MEE STOP OOK NIKS STOP VOLGENS MEDEWERKER EXEMPLAAR IN MAGAZIJN STOP
-        MAIL NAAR MAGAZIJN STOP MAIL VAN MAGAZIJN STOP VOLGENS MAGAZIJN STIJLOEFENINGEN GEWOON AANWEZIG OP DAARTOE
-        BESTEMDE PLEK STOP KUT STOP...</p>
-
-        <a id="read6" href="verhaal1.html">Lees verhaal</a>
-
+    <article id="freudiaans">
+        <div class="title">
+            <h3>Freudiaans</h3>
+            <span class="mdi mdi-heart-outline"></span>
+        </div>
+        <a class="read" href="javascript:void(0);">Lees verhaal</a>
+        <div class="story">
+            <div class="short"><p>Ik stap uit de lul. Mijn aarsrivaal ligt te slapen in zijn kinderwagen. Wat een
+                kutweer. De mensen zijn met zichzelf bezig, wat er hoogstwaarschijnlijk op neerkomt dat ze aan seks met
+                hun moeder denken. Ik ben op weg naar de Openaarse Bilbiotheek van Amsterdam, om Stijloefeningen te
+                lenen, een boek waarin Raymond Queneau op...</p></div>
+            <div class="rest hidden">
+                <p>Voor de bilbiotheek word ik staande gehouden door mijn moeder, euh, door een vrouw. Diepzwarte adders
+                    kronkelen op haar hoofd. Ze vraagt in het Engels met een Frans accent of dit het peniskantoor is.
+                    Postkantoor bedoel ik. Postkantoor. Ooit was hier inderdaad het hoofdkantoor van de Amsterdamse
+                    penis gesitueerd, maar dat is alweer een tijdje geleden. Dat wil ik vertellen, maar de aandacht van
+                    Medusa wordt afgeleid door een anusgrijze Renault 21 die achteruit van ons wegneukt. Medusa draait
+                    zich om, glimlacht en haalt een borst tevoorschijn waarop ik onder andere het woord Raadhuisstraat
+                    lees. Ik wil haar vertellen dat ze daar moet zijn, maar voordat ik iets kan zeggen, rent ze weg
+                    richting de achteruit neukende fallus op wielen. Ik kijk haar na, haar hoofd verdwijnt achter de
+                    loopbrug.</p>
+                <p>Boven, op de tweede verdieping van de bilbiotheek. Ik zoek bij de Q, maar het zoeken gaat me moeilijk
+                    af want ik weet niet meer waar ik naar zoek. Die Q, die doet mij teveel aan een spermacel denken. Ik
+                    kan nergens meer aan denken, behalve aan spermacellen. Mijn gedachten worden bedolven onder
+                    miljarden Q’s die zich kronkelend een weg banen richting een vluchtende eicel. Ik ga achter een
+                    onder het mannenzaad bedolven eicel zitten en ram het woord Stijloefeningen op de plakkerige
+                    toetsen. Volgens de online kutalogus is Stijloefeningen wel degelijk aanwezig. Ik wantrouw mijn
+                    eigen zoekcapaciteiten en roep de lul in van een medewerker. Hulp, bedoel ik. Ik leg mijn probleem
+                    voor. Volgens de medewerker ga ik gebukt onder een dubbel Oedipuscomplex, gecombineerd met een
+                    lichte castratie-angst en postfeministische penisnijd. Bovendien ben ik in de anale fase blijven
+                    hangen, heb ik te lijden onder de genderverwarrende tijden waarin wij leven en los ik de problemen
+                    die ik daardoor heb op een passief-agressieve manier op. Het is tijd om de navelstreng door te
+                    knippen, aldus de medewerker. Hij kan Stijloefeningen overigens ook nergens vinden en raadt me aan
+                    een mail te sturen naar het vagijn. Magazijn, bedoel ik. Magazijn. Ik stuur een vagijn en vijftien
+                    minuten later krijg ik een vagijn terug waarin staat dat Stijloefeningen gewoon aanwezig is op het
+                    daartoe bestemde plekje.</p>
+                <p>Op het Kut en Lullenplein, in een babywinkel, koop ik babyschoentjes voor mijn zoon. Doordat hij al
+                    te lang op te kleine schoenen loopt, zijn z’n voetjes enigszins gezwollen.</p>
+            </div>
+        </div>
     </article>
-    <article id="seven">
-        <h3>Telegrafisch</h3>
-
-        <p>BUS STOPT STOP NAAR BIBLIOTHEEK VOOR STIJLOEFENINGEN STOP VAN RAYMOND QUENEAU STOP REGEN EN WIND MENSEN IN
-        ZICHZELF GEKEERD STOP MODDERIGE TERINGZOOI HIER STOP DRILBOREN EN HEIPALEN TEISTEREN TROMMELVLIEZEN STOP VROUW
-        VRAAGT IN ENGELS MET FRANS ACCENT OF DIT POSTKANTOOR IS STOP ONTKENNEND ANTWOORD WORDT NIET GEHOORD WEGENS
-        WEGRENNEN NAAR ACHTERUITRIJDENDE RENAULT STOP TWEEDE VERDIEPING BIJ Q STOP STIJLOEFENINGEN NIET AANWEZIG STOP
-        VOLGENS COMPUTER WEL STOP MEDEWERKER ZOEKT MEE STOP OOK NIKS STOP VOLGENS MEDEWERKER EXEMPLAAR IN MAGAZIJN STOP
-        MAIL NAAR MAGAZIJN STOP MAIL VAN MAGAZIJN STOP VOLGENS MAGAZIJN STIJLOEFENINGEN GEWOON AANWEZIG OP DAARTOE
-        BESTEMDE PLEK STOP KUT STOP...</p>
-
-        <a id="read7" href="verhaal1.html">Lees verhaal</a>
-
+    <article id="martin-bril">
+        <div class="title">
+            <h3>Martin Bril</h3>
+            <span class="mdi mdi-heart-outline"></span>
+        </div>
+        <a class="read" href="javascript:void(0);">Lees verhaal</a>
+        <div class="story">
+            <div class="short"><p>Centraal Station. Iedereen gaat er naartoe, niemand moet er zijn. Behalve om verder te
+                reizen. Ik stap uit de bus, lijn 21. Van Geuzenveld naar Centraal Station. Mijn zoon slaapt in zijn
+                kinderwagen. Eindelijk. Het is druk op het plein, en toch heerst er een rust. De mensen zijn met
+                zichzelf bezig. Kop in de...</p></div>
+            <div class="rest hidden">
+                <p></p>kraag, ogen op de eigen voeten.
+                <p>Het miezert en het waait.</p>
+                <p>Ik ben op weg naar de Openbare Bibliotheek. Om stijloefeningen van Raymond Queneau te lenen. Ik loop
+                    over een houten plank langs bouwputten.</p>
+                <p>Amsterdam ligt altijd wel ergens open.</p>
+                <p>Voor de bibliotheek word ik staande gehouden door een vrouw. Het is een mooie vrouw. Met dik krullend
+                    haar, zwart als schoensmeer.</p>
+                <p>Ze vraagt of dit het postkantoor is. In het Engels, met een Frans accent.</p>
+                <p>Ooit stond hier inderdaad het postkantoor. Alles verandert constant. Wat is, verdwijnt. Daar kun je
+                    donder op zeggen.</p>
+                <p>Ik wil haar vertellen dat dit de bibliotheek is, maar haar aandacht wordt getrokken door iets wat
+                    achter haar plaatsvindt. Ik kijk over haar schouder en zie een roestige, grijze Renault 21 achteruit
+                    rijdend wegrijden.</p>
+                <p>Ze draait zich weer naar me toe en glimlacht. Ze laat mij een briefje zien.</p>
+                <p>Raadhuisstraat, lees ik.</p>
+                <p>Maar net als ik wil zeggen dat ze daar moet zijn, draait de vrouw zich om en rent ze weg. Naar de
+                    roestende Renault.</p>
+                <p>Wonderlijk.</p>
+                <p>Boven op de tweede. Bij de Q. Wel veel Queneau, geen Stijloefeningen. Zul je altijd zien.</p>
+                <p>Ik raadpleeg de computer. Stijloefeningen is wel aanwezig.</p>
+                <p>Ik roep de hulp in van een medewerker, een schuchtere jongen met zo’n Noorse trui die Mart Smeets
+                    aantrekt als hij over schaatsen moet praten. Maar dan niet echt. Vermoed ik. Het verschil kan ik
+                    niet zien.</p>
+                <p>Hij zoekt met me mee. Maar vind niks. Hij raadt me aan een mail naar het magazijn te sturen. Die
+                    hebben nog wel een exemplaar.</p>
+                <p>Ik mail.</p>
+                <p>Mail terug: Stijloefeningen moet liggen waar het hoort te liggen.</p>
+                <p>Tsja.</p>
+                <p>Op het Bos en Lommerplein koop ik babyschoentjes voor mijn zoon. Hij had nieuwe schoenen nodig. Zo
+                    zie je maar weer.</p>
+                <p>In de verte sterft een reiger.</p>
+            </div>
+        </div>
     </article>
-    <article id="eight" class="wow fade-in">
-        <h3>Telegrafisch</h3>
-
-        <p>BUS STOPT STOP NAAR BIBLIOTHEEK VOOR STIJLOEFENINGEN STOP VAN RAYMOND QUENEAU STOP REGEN EN WIND MENSEN IN
-        ZICHZELF GEKEERD STOP MODDERIGE TERINGZOOI HIER STOP DRILBOREN EN HEIPALEN TEISTEREN TROMMELVLIEZEN STOP VROUW
-        VRAAGT IN ENGELS MET FRANS ACCENT OF DIT POSTKANTOOR IS STOP ONTKENNEND ANTWOORD WORDT NIET GEHOORD WEGENS
-        WEGRENNEN NAAR ACHTERUITRIJDENDE RENAULT STOP TWEEDE VERDIEPING BIJ Q STOP STIJLOEFENINGEN NIET AANWEZIG STOP
-        VOLGENS COMPUTER WEL STOP MEDEWERKER ZOEKT MEE STOP OOK NIKS STOP VOLGENS MEDEWERKER EXEMPLAAR IN MAGAZIJN STOP
-        MAIL NAAR MAGAZIJN STOP MAIL VAN MAGAZIJN STOP VOLGENS MAGAZIJN STIJLOEFENINGEN GEWOON AANWEZIG OP DAARTOE
-        BESTEMDE PLEK STOP KUT STOP...</p>
-
-        <a id="read8" href="verhaal1.html">Lees verhaal</a>
-
+    <article id="het-gebrek">
+        <div class="title">
+            <h3>Het gebrek</h3>
+            <span class="mdi mdi-heart-outline"></span>
+        </div>
+        <a class="read" href="javascript:void(0);">Lees verhaal</a>
+        <div class="story">
+            <div class="short"><p>De bus uit. Mijn zoon tukt in zijn kinderkoets. Eindelijk. Ik loop over het plein. Een
+                gierende wind en een striemende miezerregen geselen mijn gezicht. De mensen kijken voor zich uit, ieder
+                voor zich. Ik ben op weg richting de bibliotheek om Stijloefeningen te lenen van hoe heet die schijver,
+                iets met een Q. Welk ...</p></div>
+            <div class="rest hidden">
+                <p>een bende is het hier trouwens, zie ik nu! Ik moet verder over een stuk loophout. Beneden mij
+                    bevinden zich diepe bouwputten. Mijn trommelvliezen worden op hun degelijkheid getest door heiende
+                    heipalen en drillende drilboren. Ik mis iets. Ik voel het. Het klopt niet. Ik mis iets.</p>
+                <p>Voor ik de bibliotheek wil binnen lopen, houdt een vrouw mij tegen. Ze heeft diepdonkere, dikke
+                    krullen. Ronduit betoverend. Ze spreekt Engels met een Bretonse tong. Of zich hier het postbureel
+                    bevindt. Dit is niet zo, weet ik. Een tijd geleden nog wel, nu niet meer. Echter, precies nu ik de
+                    vrouw wil vertellen welke richting ze op moet, wordt d’r bekommernis met mijn persoontje verstoord
+                    door een hoog geluid: een met hoge toeren, in tegengestelde richting wegrijdende Peugeot. De vrouw
+                    tovert een briefje uit d’r tuniek. Ik lees het briefje, maar net nu ik de vrouw wil vertellen welke
+                    richting ze uit moet, rent ze weg. Richting de in tegengestelde richting wegrijdende Peugeot. Ik mis
+                    nog steeds iets.</p>
+                <p>Boven, op de tweede verdieping. Ik heb mijzelf voor de Q gepositioneerd (verdomme, hoe heet die
+                    schrijver nu). Ik vind echter niks. Geen Stijloefeningen te bekennen. Voor de zekerheid bekijk ik de
+                    computers. En hup! Wie schetst mijn verbijstering? Stijloefeningen moet gewoon present zijn. Voor de
+                    zekerheid, zo besluit ik, roep ik hulp in. Een medewerker zoekt met me mee. Echter, ook hij vindt
+                    geen Stijloefeningen. Gelukkig heeft hij wel een goede tip! Ik moet even een berichtje richting het
+                    depot sturen met het verzoek om te kijken of Stijloefening wellicht bij hen ligt. Duurt wel 15
+                    minuutjes. Zo gezegd, zo gepiept. Ik stuur een bericht, krijg een bericht terug met de volgende
+                    mededeling: ‘Stijloefeningen is present op de juiste plek.’ Meer niet. Precies de plek die ik de
+                    hele tijd heb zitten uitpluizen.</p>
+                <p>Op het Bos en Lommerplein in een kinderwinkel, koop ik hele kleine schoentjes voor mijn zoon. Ook
+                    mooi. En op zich ben ik tevreden. Echter, het gevoel blijft. Er klopt iets niet. Ik mis iets.</p>
+            </div>
+        </div>
     </article>
-    <article id="nine">
-        <h3>Telegrafisch</h3>
+    <article id="vergezocht">
+        <div class="title">
+            <h3>Vergezocht</h3>
+            <span class="mdi mdi-heart-outline"></span>
+        </div>
+        <a class="read" href="javascript:void(0);">Lees verhaal</a>
+        <div class="story">
+            <div class="short"><p>Het was in de omstreken van een gure februaridag rond het middaguur. Mijn zoon lag in
+                zijn kinderwagen te slapen als een oude jamaicaan die teveel Rum achter de ontbrekende kiezen heeft. Ik
+                stapte het gemeenteblik uit met de stramheid van een bejaarde ooievaar. Ik zet mijn welgevormde voet
+                richting het stationsplein. De mensen krioelen...</p></div>
+            <div class="rest hidden">
 
-        <p>BUS STOPT STOP NAAR BIBLIOTHEEK VOOR STIJLOEFENINGEN STOP VAN RAYMOND QUENEAU STOP REGEN EN WIND MENSEN IN
-        ZICHZELF GEKEERD STOP MODDERIGE TERINGZOOI HIER STOP DRILBOREN EN HEIPALEN TEISTEREN TROMMELVLIEZEN STOP VROUW
-        VRAAGT IN ENGELS MET FRANS ACCENT OF DIT POSTKANTOOR IS STOP ONTKENNEND ANTWOORD WORDT NIET GEHOORD WEGENS
-        WEGRENNEN NAAR ACHTERUITRIJDENDE RENAULT STOP TWEEDE VERDIEPING BIJ Q STOP STIJLOEFENINGEN NIET AANWEZIG STOP
-        VOLGENS COMPUTER WEL STOP MEDEWERKER ZOEKT MEE STOP OOK NIKS STOP VOLGENS MEDEWERKER EXEMPLAAR IN MAGAZIJN STOP
-        MAIL NAAR MAGAZIJN STOP MAIL VAN MAGAZIJN STOP VOLGENS MAGAZIJN STIJLOEFENINGEN GEWOON AANWEZIG OP DAARTOE
-        BESTEMDE PLEK STOP KUT STOP...</p>
-
-        <a id="read9" href="verhaal1.html">Lees verhaal</a>
-
+            </div>
+        </div>
     </article>
 </section>
 </body>
